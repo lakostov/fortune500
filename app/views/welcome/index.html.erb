@@ -1,3 +1,7 @@
 <% provide(:title, "Home") %>
 <h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<ul>
+	<% Company.all.each do |c| %>
+	<li><%= c.rank %> <%= c.name %> <%= c.revenue %> <%= c.employees %> <%= c.profit %> <%= c.zip %> <%= c.lat %> <%= c.long %></li>
+	<% end %>
+</ul>
