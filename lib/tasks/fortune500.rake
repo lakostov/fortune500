@@ -4,10 +4,10 @@ namespace :fortune500 do
   task seed_fortune500: :environment do
 
     #drop old data before importing new data
+    Company.destroy_all
     State.destroy_all
   	Sector.destroy_all
   	Industry.destroy_all
-  	Company.destroy_all
     Fortune2016.destroy_all
     Fortune2015.destroy_all
     Fortune2014.destroy_all
