@@ -201,17 +201,10 @@ namespace :fortune500 do
       rank2011: rank2011,
       rank2010: rank2010,
       rank2009: rank2009,
-      rank2008: rank2008  
+      rank2008: rank2008,
+      lat: row[24],
+      long: row[25]
     )
-    end
-
-    CSV.foreach("lib/assets/Fortune-500/zip_codes_states.csv", :headers =>true) do |row |
-
-      #update new lat long columns with the data
-      zip = row[0].to_i
-      company = Company.where(zip: zip.to_s)
-      company.update(lat: row[1], long: row[2])
-    
     end
 
   end
