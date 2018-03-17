@@ -3,21 +3,6 @@ namespace :fortune500 do
   desc "Pull all data into the database"
   task seed_fortune500: :environment do
 
-    #drop old data before importing new data
-    State.destroy_all
-  	Sector.destroy_all
-  	Industry.destroy_all
-  	Company.destroy_all
-    Fortune2016.destroy_all
-    Fortune2015.destroy_all
-    Fortune2014.destroy_all
-    Fortune2013.destroy_all
-    Fortune2012.destroy_all
-    Fortune2011.destroy_all
-    Fortune2010.destroy_all
-    Fortune2009.destroy_all
-    Fortune2008.destroy_all
-
   	CSV.foreach("lib/assets/Fortune-500/states.csv", :headers =>true) do |row |
 
       #create new model instances with the data
