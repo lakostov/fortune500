@@ -1,7 +1,16 @@
 <% provide(:title, "Home") %>
-<h1>Welcome#index</h1>
-<div id="map"></div>
-
+<h1>Welcome at US Fortune-500</h1>
+<h2>US Fortune-500 2017</h2>
+<p>Hover over the map to find more information or click on a company from the list.</p>
+<div id="map" class="hidden-sm hidden-xs col-lg-8 col-xl-8 col-md-8"></div>
+<div id="right-widget" class="col-lg-4 col-xl-4 col-md-4 sm-12 xs-12">
+  <ul>
+  <% @companies_paginated.each do |c| %>
+  <li><%= c.rank %>. <%= link_to c.name, "#" %> Revenue: $<%= c.revenue.to_i %>(Mil)</li>
+  <% end %>
+</ul>
+<%= will_paginate @companies_paginated %>
+</div>
 <script>
 	function initMap() {
        // load the map
@@ -40,14 +49,13 @@
                     info.setContent('<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h3>' + '<%= link_to c.name, "#" %>' +'</h3>'+
+            '<h3>' + '<%= link_to c.name, "#" %>'+'</h3>'+
             '<div id="bodyContent">'+'<span>'+'Revenue: ' + '<%= c.revenue %>' + '</span>'+ '<br>'+
             '<span>'+'Profit: '+'<%= c.profit %>'+'</span>'+
             '</div>'+
             '</div>');
                     info.open(map, this);
         });
-
         <% end %>
         function getCircle(magnitude) {
         return {
@@ -64,8 +72,4 @@
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBg299oHS0oMVGpAQ9bym65s8aIsFSkzq8&callback=initMap">
     </script>
-<ul>
-	<% Company.all.each do |c| %>
-	<li><%= c.rank %> <%= c.name %> <%= c.revenue %> <%= c.employees %> <%= c.profit %> <%= c.zip %> <%= c.lat %> <%= c.long %></li>
-	<% end %>
-</ul>
+

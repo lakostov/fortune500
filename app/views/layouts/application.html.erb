@@ -6,23 +6,11 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
-    <style>
-        #map {
-          height: 50%;
-        }
-        /* Optional: Makes the sample page fill the window. */
-     html, body {
-          height: 100%;
-          margin: 0;
-          padding: 0;
-        }
-        
-      </style>
   </head>
 
   <body>
+    <%= render :partial=> "layouts/header" %>
     <%= yield %>
+    <%= render :partial=> "layouts/footer" %>
   </body>
 </html>

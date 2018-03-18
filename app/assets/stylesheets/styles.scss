@@ -1,0 +1,140 @@
+// Place all the styles related to the styles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+html {
+	height: 100%;
+}
+body {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding-top: 45px;
+    padding-bottom: 85px;
+    clear: both;
+}
+#map {
+          display: inline-block;
+          height: 70%;
+          width: 60%;
+          margin-left: 30px;
+}
+#right-widget{
+	      display: inline-block;
+          border: 1px #ccc dotted;
+          margin: 0 20px;
+          padding: 10px 20px;
+          text-align: left;
+
+          ul li{
+          font-weight: bolder;
+          }
+
+}
+.row {
+	padding: 0 !important;
+	margin: 0 0 45px 0 !important;
+}
+#bodyContent span {
+	font-weight: bold;
+}
+ul {
+	list-style: none;
+}
+.under-nav {
+    display: block;
+    width: 100%;
+    color: #fff2cc;
+	background: #4d3319;
+	padding: 10px 0;
+	margin-bottom: 10px;
+}
+.under-nav .home_header {
+	margin-top: 0;
+}
+.clear {
+	clear: both;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #222;
+    color: #eee;
+    text-align: center;
+    padding: 15px 0 10px 0;
+}
+.float_left {
+	float: left;
+	margin-right: 20px;
+}
+table {
+	text-align: left;
+	margin: 10px 20px;
+	padding: 10px 0;
+	font-weight: bold;
+	border-spacing: 5px;
+
+	td {
+	padding: 5px;
+	}
+
+	th {
+	padding: 5px;
+	}
+}
+ul.nav li a, ul.nav li a:visited {
+    color: #fff !important;
+}
+
+ul.nav li a:hover, ul.nav li a:active {
+    color: #ccc !important;
+}
+a:link {
+	color: #66b5ff !important;
+}
+a:visited {
+	color: #66b5ff !important;
+}
+a:hover {
+	color: #808080 !important;
+	text-decoration: none !important;
+	background: none !important;
+}
+a:active {
+
+}
+.list_left {
+	text-align: left;
+	padding: 20px;
+
+	li {
+	font-weight: bold;
+	margin-bottom: 5px;
+	}
+}
+.space {
+	display: block;
+	height: 5%;
+}
+.center {
+	text-align: center;
+}
+.error {
+    display: block;
+    margin: 10px auto;
+	color: red;
+}
+/* Dropdown menu background color*/
+
+.navbar-nav > li > .dropdown-menu {     background-color: #222;  }
+
+/* Dropdown menu font color*/
+
+ .navbar-nav > li > .dropdown-menu a{   color: #555555;  }
+ .chart-container {
+  position: relative;
+  margin: auto;
+  height: 80vh;
+  width: 80vw;
+}
