@@ -1,7 +1,7 @@
 <% provide(:title, "Home") %>
 <h1>Welcome at US Fortune-500</h1>
 <h2>US Fortune-500 2017</h2>
-<p>Hover over the map to find more information or click on a company from the list.</p>
+<p>Click on a company from the list <span class="hidden-sm hidden-xs"> or hover over the map </span>to find more information.</p>
 <div id="map" class="hidden-sm hidden-xs col-lg-8 col-xl-8 col-md-8"></div>
 <div id="right-widget" class="col-lg-4 col-xl-4 col-md-4 sm-12 xs-12">
   <ul>
@@ -45,7 +45,7 @@
         position: {lat: <%= c.lat %>, lng: <%= c.long %>},
         map: map,
         icon: getCircle(<%= (rad < 4) ? 4 : rad  %>)
-        }).addListener('mouseover', function(){ 
+        }).addListener('mouseover', function(){
                     info.setContent('<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
@@ -72,4 +72,3 @@
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBg299oHS0oMVGpAQ9bym65s8aIsFSkzq8&callback=initMap">
     </script>
-
