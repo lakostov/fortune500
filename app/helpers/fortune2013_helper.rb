@@ -1,0 +1,2 @@
+module Fortune2013Helper
+end
