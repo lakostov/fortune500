@@ -13,23 +13,23 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-            <li><%= link_to "Home", '/' %></li>
-            <li><%= link_to "Sectors", "/" %></li>
-            <li><%= link_to "Industries", "/" %></li>
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Sectors", sector_path %></li>
+            <li><%= link_to "Industries", industry_path %></li>
             <li><%= link_to "States", "/" %></li>
             <li class="dropdown">
             <a href="#" data-toggle="dropdown" class="dropdown-toggle">Fortune-500<b class="caret"></b></a>
             <ul class="dropdown-menu">
-                <li><a href="#">2017</a></li>
-                <li><a href="#">2016</a></li>
-                <li><a href="#">2015</a></li>
-                <li><a href="#">2014</a></li>
-                <li><a href="#">2013</a></li>
-                <li><a href="#">2012</a></li>
-                <li><a href="#">2011</a></li>
-                <li><a href="#">2010</a></li>
-                <li><a href="#">2009</a></li>
-                <li><a href="#">2008</a></li>
+                <li><a href="/fortune2017">2017</a></li>
+                <li><a href="fortune2016">2016</a></li>
+                <li><a href="fortune2015">2015</a></li>
+                <li><a href="fortune2014">2014</a></li>
+                <li><a href="fortune2013">2013</a></li>
+                <li><a href="fortune2012">2012</a></li>
+                <li><a href="fortune2011">2011</a></li>
+                <li><a href="fortune2010">2010</a></li>
+                <li><a href="fortune2009">2009</a></li>
+                <li><a href="fortune2008">2008</a></li>
             </ul>
         </li>
              <li class="dropdown">
@@ -45,4 +45,3 @@
         </div>
     </div>
 </nav>
-

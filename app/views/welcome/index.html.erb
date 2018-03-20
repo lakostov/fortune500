@@ -1,12 +1,12 @@
 <% provide(:title, "Home") %>
 <h1>Welcome at US Fortune-500</h1>
 <h2>US Fortune-500 2017</h2>
-<p>Click on a company from the list <span class="hidden-sm hidden-xs"> or hover over the map </span>to find more information.</p>
+<p>Click on a company from the list <span class="hidden-sm hidden-xs"> or hover the map </span>to find more information.</p>
 <div id="map" class="hidden-sm hidden-xs col-lg-8 col-xl-8 col-md-8"></div>
 <div id="right-widget" class="col-lg-4 col-xl-4 col-md-4 sm-12 xs-12">
   <ul>
   <% @companies_paginated.each do |c| %>
-  <li><%= c.rank %>. <%= link_to c.name, "#" %> Revenue: $<%= c.revenue.to_i %>(Mil)</li>
+  <li><%= c.rank %>. <%= link_to c.name, "/fortune2017/#{c.id}" %> Revenue: $<%= c.revenue.to_i %>(Mil)</li>
   <% end %>
 </ul>
 <%= will_paginate @companies_paginated %>
@@ -49,7 +49,7 @@
                     info.setContent('<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h3>' + '<%= link_to c.name, "#" %>'+'</h3>'+
+            '<h3>' + '<%= link_to c.name, "/fortune2017/#{c.id}" %>'+'</h3>'+
             '<div id="bodyContent">'+'<span>'+'Revenue: ' + '<%= c.revenue %>' + '</span>'+ '<br>'+
             '<span>'+'Profit: '+'<%= c.profit %>'+'</span>'+
             '</div>'+

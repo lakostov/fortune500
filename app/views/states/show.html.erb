@@ -1,13 +1,12 @@
-<h1>Fortune-500 Companies 2015</h1>
+<h1><%= @state.name %></h1>
 <div id="row">
 <div class="col-lg-4 col-xl-4 col-md-4"></div>
 <div class="fortune-list col-lg-4 col-xl-4 col-md-4 sm-12 xs-12">
 <ul>
 <% @companies.each do |c| %>
-<li><%= c.rank %>. <%= c.name %></li>
+<li><%= link_to c.name, "/fortune2017/#{c.id}" %></li>
 <% end %>
 </ul>
-<%= will_paginate @companies %>
 </div>
 <div class="col-lg-4 col-xl-4 col-md-4"></div>
 </div>

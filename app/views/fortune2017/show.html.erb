@@ -1,2 +1,19 @@
-<h1>Fortune2017#show</h1>
-<p>Find me in app/views/fortune2017/show.html.erb</p>
+<h1><%= @company.name %></h1>
+<div class="row">
+  <div class="col-lg-4 col-xl-4 col-md-4"></div>
+  <div class="fortune-list col-lg-4 col-xl-4 col-md-4 sm-12 xs-12">
+  <ul>
+  <li><h2>Fortune-500 2017</h2></li>
+  <li>Rank: <%= @company.rank %></li>
+  <li>Name: <%= @company.full_name %></li>
+  <% if @company.web %>
+  <li>Website: <%= link_to @company.web, @company.web %></li>
+  <% end %>
+  <li>Revenue: $<%= @company.revenue %>(Mil), Change from previous year: <%= @company.revchange %>%</li>
+  <li>Profit: $<%= @company.profit %>(Mil), Change from previous year: <%= @company.profchange %>%</li>
+  <li>Assets: $<%= @company.assets %>(Mil)</li>
+  <li>Markrt value: $<%= @company.market_value %>(Mil)</li>
+  </ul>
+  </div>
+  <div class="col-lg-4 col-xl-4 col-md-4"></div>
+</div>

@@ -30,7 +30,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'will_paginate', '~> 3.1.0'
+
 gem 'jquery-rails'
 # Use Capistrano for deployment
 gem 'capistrano-rails', group: :development
@@ -40,7 +40,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
-  gem 'cucumber-rails', :require=>false 
+  gem 'cucumber-rails', :require=>false
   gem 'database_cleaner'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'

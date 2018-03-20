@@ -1,2 +1,13 @@
-<h1>Fortune2016#index</h1>
-<p>Find me in app/views/fortune2016/index.html.erb</p>
+<h1>Fortune-500 Companies 2016</h1>
+<div id="row">
+<div class="col-lg-4 col-xl-4 col-md-4"></div>
+<div class="fortune-list col-lg-4 col-xl-4 col-md-4 sm-12 xs-12">
+<ul>
+<% @companies.each do |c| %>
+<li><%= c.rank %>. <%= c.name %></li>
+<% end %>
+</ul>
+<%= will_paginate @companies %>
+</div>
+<div class="col-lg-4 col-xl-4 col-md-4"></div>
+</div>
