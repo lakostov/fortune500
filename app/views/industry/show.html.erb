@@ -1,1 +1,14 @@
 <h1><%= @industry.name %></h1>
+<h3>Fortune-500 2017 companies in <%= @industry.name %></h3>
+<div id="row">
+<div class="col-lg-4 col-xl-4 col-md-4"></div>
+<div class="fortune-list col-lg-4 col-xl-4 col-md-4 sm-12 xs-12">
+<ul>
+<% @companies.each do |c| %>
+<li><%= c.rank %>. <%= link_to c.name, "/fortune2017/#{c.id}" %></li>
+<% end %>
+</ul>
+<%= will_paginate @companies %>
+</div>
+<div class="col-lg-4 col-xl-4 col-md-4"></div>
+</div>

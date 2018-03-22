@@ -7,12 +7,14 @@
   <li>Rank: <%= @company.rank %></li>
   <li>Name: <%= @company.full_name %></li>
   <% if @company.web %>
-  <li>Website: <%= link_to @company.web, @company.web %></li>
+  <li>Website: <%= link_to @company.web, @company.web, target: "_blank" %></li>
   <% end %>
-  <li>Revenue: $<%= @company.revenue %>(Mil), Change from previous year: <%= @company.revchange %>%</li>
-  <li>Profit: $<%= @company.profit %>(Mil), Change from previous year: <%= @company.profchange %>%</li>
-  <li>Assets: $<%= @company.assets %>(Mil)</li>
-  <li>Markrt value: $<%= @company.market_value %>(Mil)</li>
+  <li>Revenue: $<%= @company.revenue %>($M), Change from previous year: <%= @company.revchange %>%</li>
+  <li>Profit: $<%= @company.profit %>($M), Change from previous year: <%= @company.profchange %>%</li>
+  <li>Assets: $<%= @company.assets %>($M)</li>
+  <% if @company.market_value != 0 %>
+  <li>Market value: $<%= @company.market_value %>($M)</li>
+  <% end %>
   </ul>
   </div>
   <div class="col-lg-4 col-xl-4 col-md-4"></div>

@@ -6,7 +6,7 @@
 <div id="right-widget" class="col-lg-4 col-xl-4 col-md-4 sm-12 xs-12">
   <ul>
   <% @companies_paginated.each do |c| %>
-  <li><%= c.rank %>. <%= link_to c.name, "/fortune2017/#{c.id}" %> Revenue: $<%= c.revenue.to_i %>(Mil)</li>
+  <li><%= c.rank %>. <%= link_to c.name, "/fortune2017/#{c.id}" %> Revenue: $<%= c.revenue.to_i %>($M)</li>
   <% end %>
 </ul>
 <%= will_paginate @companies_paginated %>
@@ -50,8 +50,8 @@
             '<div id="siteNotice">'+
             '</div>'+
             '<h3>' + '<%= link_to c.name, "/fortune2017/#{c.id}" %>'+'</h3>'+
-            '<div id="bodyContent">'+'<span>'+'Revenue: ' + '<%= c.revenue %>' + '</span>'+ '<br>'+
-            '<span>'+'Profit: '+'<%= c.profit %>'+'</span>'+
+            '<div id="bodyContent">'+'<span>'+'Revenue: ' + '$<%= c.revenue %>($M)' + '</span>'+ '<br>'+
+            '<span>'+'Profit: '+'$<%= c.profit %>($M)'+'</span>'+
             '</div>'+
             '</div>');
                     info.open(map, this);
