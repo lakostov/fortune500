@@ -1,11 +1,11 @@
 <h1>Fortune-500 Sectorts 2017</h1>
-<%= bar_chart Company.group(:sector_id).count, xtitle: "Sector ID", ytitle: "Number of Companies" %>
+<%= bar_chart Company.group(:sector_id).count, xtitle: "Number of Companies", ytitle: "Sector ID" %>
 <div id="row">
 <div class="col-lg-4 col-xl-4 col-md-4"></div>
 <div class="fortune-list col-lg-4 col-xl-4 col-md-4 sm-12 xs-12">
 <ul>
 <% @sectors.each do |s| %>
-<li><%= link_to s.name, "/sector/#{s.id}" %></li>
+<li><%= s.id %>. <%= link_to s.name, "/sector/#{s.id}" %></li>
 <% end %>
 </ul>
 <%= will_paginate @sectors %>
