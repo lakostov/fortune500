@@ -4,11 +4,12 @@
 <div id="row">
 <div class="col-lg-4 col-xl-4 col-md-4"></div>
 <div class="fortune-list col-lg-4 col-xl-4 col-md-4 sm-12 xs-12">
-<ul>
+<table class="sectors">
+<tr><th>ID</th><th>Name</th></tr>
 <% @sectors.each do |s| %>
-<li><%= s.id %>. <%= link_to s.name, "/sector/#{s.id}" %></li>
+<tr><td><%= s.id %>. </td><td><%= link_to s.name, "/sector/#{s.id}" %></td></tr>
 <% end %>
-</ul>
+</table>
 <%= will_paginate @sectors %>
 </div>
 <div class="col-lg-4 col-xl-4 col-md-4"></div>

@@ -5,5 +5,16 @@ class Fortune2017Controller < ApplicationController
 
   def show
     @company = Company.find(params[:id])
+    @ranking = Hash.new
+    @ranking["2017"] = @company.rank
+    @ranking["2016"] = @company.rank2016
+    @ranking["2015"] = @company.rank2015
+    @ranking["2014"] = @company.rank2014
+    @ranking["2013"] = @company.rank2013
+    @ranking["2012"] = @company.rank2012
+    @ranking["2011"] = @company.rank2011
+    @ranking["2010"] = @company.rank2010
+    @ranking["2009"] = @company.rank2009
+    @ranking["2008"] = @company.rank2008
   end
 end
