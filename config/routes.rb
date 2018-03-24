@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get '/fortune2016/', to: 'fortune2016#index'
   get '/fortune2017/', to: 'fortune2017#index'
   get '/fortune2017/:id', to: 'fortune2017#show'
+  get '/sector/companies/:id', to: 'sector#companies'
   root 'welcome#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

@@ -1,0 +1,12 @@
+<h1>Companies in <%= @sector.name %></h1>
+<div id="row">
+<div class="col-lg-4 col-xl-4 col-md-4"></div>
+<div class="fortune-list col-lg-4 col-xl-4 col-md-4 sm-12 xs-12">
+<ul>
+<% @companies.each do |c| %>
+<li><%= link_to c.name, "/fortune2017/#{c.id}" %></li>
+<% end %>
+</ul>
+</div>
+<div class="col-lg-4 col-xl-4 col-md-4"></div>
+</div>

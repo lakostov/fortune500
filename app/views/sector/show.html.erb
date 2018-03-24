@@ -1,4 +1,5 @@
 <h1><%= @sector.name %></h1>
+<h4><%= link_to "Number of companies in #{@sector.name}: #{@num_companies}", "/sector/companies/#{@sector.id}" %></h4>
 <h3>Fortune-500 2017 Industries in <%= @sector.name %></h3>
 <div id="row">
 <div class="col-lg-4 col-xl-4 col-md-4"></div>

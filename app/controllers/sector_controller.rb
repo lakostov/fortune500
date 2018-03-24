@@ -6,6 +6,12 @@ class SectorController < ApplicationController
   def show
     @sector = Sector.find(params[:id])
     all_industries = Company.where(["sector_id = ?", "#{params[:id]}"])
-    @industries = all_industries.select(:industry_id).distinct
+    @industries = Company.select(:industry_id).distinct
+    @num_companies = all_industries.count
+  end
+
+  def companies
+    @sector = Sector.find(params[:id])
+    @companies = Company.where("sector_id = ?", "#{params[:id]}")
   end
 end
