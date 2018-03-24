@@ -1,3 +1,4 @@
+require 'net/http'
 class Fortune2017Controller < ApplicationController
   def index
     @companies = Company.all.paginate(page: params[:page], per_page: 30)
@@ -5,6 +6,10 @@ class Fortune2017Controller < ApplicationController
 
   def show
     @company = Company.find(params[:id])
+    source = "https://api.iextrading.com/1.0/stock/#{@company.ticker}/quote"
+    resp = Net::HTTP.get_response(URI.parse(source))
+    data = resp.body
+    @quote = JSON.parse(data)
     @ranking = Hash.new
     @ranking["2017"] = @company.rank
     @ranking["2016"] = @company.rank2016
