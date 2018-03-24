@@ -7,7 +7,7 @@
   <div class="col-lg-4 col-xl-4 col-md-4 sm-12 xs-12"></div>
   <div class="fortune-list col-lg-4 col-xl-4 col-md-4 sm-12 xs-12">
   <ul>
-  <li><h2>Fortune-500 2017</h2></li>
+  <li><h2><%= link_to "Fortune-500 2017", "/fortune2017" %></h2></li>
   <li>Rank: <%= @company.rank %></li>
   <li>Name: <%= @company.full_name %></li>
   <li>Address: <%= @company.address %>, <%= @company.city %>, <%= State.find(@company.state_id).abrv %> <%= @company.zip %></li>

@@ -9,6 +9,7 @@
 <li><%= link_to Industry.find(i.industry_id).name, "/industry/#{i.industry_id}" %></li>
 <% end %>
 </ul>
+<%= will_paginate @industries %>
 </div>
 <div class="col-lg-4 col-xl-4 col-md-4"></div>
 </div>

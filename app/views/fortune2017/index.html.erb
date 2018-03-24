@@ -4,7 +4,7 @@
 <div class="fortune-list col-lg-4 col-xl-4 col-md-4 sm-12 xs-12">
 <ul>
 <% @companies.each do |c| %>
-<li><%= c.rank %>. <%= c.name %></li>
+<li><%= c.rank %>. <%= link_to "#{c.name}", "/fortune2017/#{c.id}" %></li>
 <% end %>
 </ul>
 <%= will_paginate @companies %>

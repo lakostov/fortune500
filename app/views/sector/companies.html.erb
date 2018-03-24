@@ -2,11 +2,13 @@
 <div id="row">
 <div class="col-lg-4 col-xl-4 col-md-4"></div>
 <div class="fortune-list col-lg-4 col-xl-4 col-md-4 sm-12 xs-12">
-<ul>
+<table>
+<tr><th>Rank</th><th>Name</th></tr>
 <% @companies.each do |c| %>
-<li><%= link_to c.name, "/fortune2017/#{c.id}" %></li>
+<tr><td><%= c.rank %></td><td><%= link_to c.name, "/fortune2017/#{c.id}" %></td></tr>
 <% end %>
-</ul>
+</table>
+<%= will_paginate @companies %>
 </div>
 <div class="col-lg-4 col-xl-4 col-md-4"></div>
 </div>
