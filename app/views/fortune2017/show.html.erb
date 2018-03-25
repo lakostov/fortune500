@@ -7,9 +7,9 @@
   <div class="col-lg-4 col-xl-4 col-md-4 sm-12 xs-12">
     <h2><%= @quote["companyName"] %></h2>
     <h3><%= @quote["symbol"] %></h3>
-    <ul>
-    <li>Price: <%= @quote["latestPrice"] %></li>
-    <li>Change: <%= @quote["change"] %></li>
+    <ul class="quote">
+    <li>Share price: <%= @quote["latestPrice"] %></li>
+    <li>Change: <span class="<%= @quote["change"] < 0 ? 'red' : 'green' %>"><%= @quote["change"] %></span></li>
     <li>High: <%= @quote["high"] %></li>
     <li>Low: <%= @quote["low"] %></li>
   </ul>
