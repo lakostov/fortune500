@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :users
   get '/states/', to: 'states#index'
   get 'states/:id', to: 'states#show'
   get '/industry/', to: 'industry#index'
