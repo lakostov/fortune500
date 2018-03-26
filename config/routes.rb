@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+
   resources :users
   get '/states/', to: 'states#index'
   get 'states/:id', to: 'states#show'
@@ -19,8 +21,11 @@ Rails.application.routes.draw do
   get '/fortune2017/', to: 'fortune2017#index'
   get '/fortune2017/:id', to: 'fortune2017#show'
   get '/sector/companies/:id', to: 'sector#companies'
-  get  '/signup',  to: 'users#new'
-  post '/signup',  to: 'users#create'
+  get '/signup', to: 'users#new'
+  post '/signup', to: 'users#create'
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
   root 'welcome#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
