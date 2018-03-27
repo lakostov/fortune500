@@ -1,5 +1,5 @@
 User.create!(username:  "admin",
-             email: "l.kostov.17@aberdeen.ac.uk",
+             email: "admin@fortune500app.com",
              first_name: "Lachezar",
              last_name: "Kostov",
              password:              "password",
