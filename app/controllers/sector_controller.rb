@@ -1,4 +1,5 @@
 class SectorController < ApplicationController
+  before_action :logged_in_user, only: [:index, :show, :companies]
   def index
     @sectors = Sector.all.paginate(page: params[:page], per_page: 30)
   end

@@ -1,5 +1,6 @@
 require 'net/http'
 class Fortune2017Controller < ApplicationController
+before_action :logged_in_user, only: [:index, :show]
   def index
     @companies = Company.all.paginate(page: params[:page], per_page: 30)
   end
