@@ -1,5 +1,11 @@
 <% provide(:title, "States") %>
 <h1>Fortune-500 Companies 2017 by State</h1>
+<h4>Search for state</h4>
+<%= form_tag("/search/state", :method => "get") do %>
+    <%= text_field_tag :name, params[:name] %>
+    <%= submit_tag "Search", :name => nil %>
+<% end %>
+<h2>State name</h2>
 <div id="row">
 <div class="col-lg-4 col-xl-4 col-md-4"></div>
 <div class="fortune-list col-lg-4 col-xl-4 col-md-4 sm-12 xs-12">

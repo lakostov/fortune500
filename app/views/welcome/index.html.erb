@@ -3,6 +3,12 @@
     <div class="alert alert-<%= key %>"><%= value %></div>
 <% end %>
 <h1>Welcome at US Fortune-500</h1>
+<h4>Search for</h4>
+<%= form_tag("/search", :method => "post") do %>
+    <%= select_tag "category", "<option>Company</option><option>Sector</option><option>Industry</option><option>State</option>".html_safe, {class: "search_dropdown"} %>
+    <%= text_field_tag :name, params[:name] %>
+    <%= submit_tag "Search", :name => nil %>
+<% end %>
 <h2><%= link_to "US Fortune-500 2017", "/fortune2017" %></h2>
 <p>Click on a company from the list <span class="hidden-sm hidden-xs"> or hover the map </span>to find more information.</p>
 <div id="map" class="hidden-sm hidden-xs col-lg-8 col-xl-8 col-md-8"></div>

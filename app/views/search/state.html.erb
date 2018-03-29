@@ -1,20 +1,24 @@
 <% provide(:title, "2017") %>
-<h1>Fortune-500 Companies 2017</h1>
-<h4>Search for company</h4>
-<%= form_tag("/search/company", :method => "get") do %>
+<h1>Search for state</h1>
+<%= form_tag("/search/state", :method => "get") do %>
     <%= text_field_tag :name, params[:name] %>
     <%= submit_tag "Search", :name => nil %>
 <% end %>
+<h2>Search result</h2>
 <div id="row">
 <div class="col-lg-4 col-xl-4 col-md-4"></div>
 <div class="fortune-list col-lg-4 col-xl-4 col-md-4 sm-12 xs-12">
-<table>
-<tr><th>Rank</th><th>Name</th></tr>
-<% @companies.each do |c| %>
-<tr><td><%= c.rank %>.</td><td><%= link_to "#{c.name}", "/fortune2017/#{c.id}" %></td></tr>
+<% if !@states.empty? %>
+<ul>
+<% @states.sort.each do |s| %>
+<li><%= link_to "#{s.name}", "/states/#{s.id}" %></li>
 <% end %>
-</table>
-<%= will_paginate @companies %>
+</ul>
+<% else %>
+<div class="alert alert-warning">
+No results found
+</div>
+<% end %>
 </div>
 <div class="col-lg-4 col-xl-4 col-md-4"></div>
 </div>

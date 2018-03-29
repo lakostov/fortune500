@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
 
+  get 'search/index'
+
+  get 'search/company'
+
+  get 'search/sector'
+
+  get 'search/industry'
+
+  get 'search/state'
+
   get 'sessions/new'
 
   resources :users
@@ -22,6 +32,11 @@ Rails.application.routes.draw do
   get '/fortune2017/', to: 'fortune2017#index'
   get '/fortune2017/:id', to: 'fortune2017#show'
   get '/sector/companies/:id', to: 'sector#companies'
+  post '/search/', to: 'search#index'
+  get '/search/company/', to: 'search#company'
+  get '/search/sector/', to: 'search#sector'
+  get '/search/industry/', to: 'search#industry'
+  get '/search/state/', to: 'search#state'
   get '/signup', to: 'users#new'
   post '/signup', to: 'users#create'
   get '/login', to: 'sessions#new'
