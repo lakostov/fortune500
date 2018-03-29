@@ -4,3 +4,6 @@ jack:
   username: jackdaniels
   email: jdaniels@abv.com
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+  

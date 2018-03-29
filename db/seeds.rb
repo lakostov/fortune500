@@ -4,7 +4,9 @@ User.create!(username:  "admin",
              last_name: "Kostov",
              password:              "password",
              password_confirmation: "password",
-             admin: true)
+             admin: true,
+             activated: true,
+            activated_at: Time.zone.now)
 99.times do |n|
   username  = "User#{n+1}"
   email = "user-#{n+1}@fortune500app.com"
@@ -16,5 +18,7 @@ User.create!(username:  "admin",
                first_name: first_name,
                last_name: last_name,
                password:              password,
-               password_confirmation: password)
+               password_confirmation: password,
+               activated: true,
+               activated_at: Time.zone.now)
 end

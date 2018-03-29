@@ -1,4 +1,7 @@
 <% provide(:title, "Home") %>
+<% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>"><%= value %></div>
+<% end %>
 <h1>Welcome at US Fortune-500</h1>
 <h2><%= link_to "US Fortune-500 2017", "/fortune2017" %></h2>
 <p>Click on a company from the list <span class="hidden-sm hidden-xs"> or hover the map </span>to find more information.</p>

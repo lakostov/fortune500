@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'sessions/new'
 
   resources :users
+  resources :account_activations, only: [:edit]
   get '/states/', to: 'states#index'
   get 'states/:id', to: 'states#show'
   get '/industry/', to: 'industry#index'
