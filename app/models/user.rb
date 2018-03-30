@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_one :subscribtion
   attr_accessor :remember_token, :activation_token
   before_save   :downcase_email
   before_save   :downcase_username

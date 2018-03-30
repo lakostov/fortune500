@@ -13,6 +13,9 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
+    if Subscribtion.find_by(user_id: @user.id)
+    @subsribtion_end_date = @user.subscribtion.end_date
+    end
   end
 
   # GET /users/new

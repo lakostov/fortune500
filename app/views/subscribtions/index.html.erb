@@ -1,0 +1,15 @@
+<h1>Subsribe to a plan</h1>
+<% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+<div id="row">
+<div class="col-lg-4 col-xl-4 col-md-4"></div>
+<div class="fortune-list col-lg-4 col-xl-4 col-md-4 sm-12 xs-12">
+<ul>
+<% @plans.each do |p| %>
+<li><%= link_to p.name, "/subscribtions/plans/#{p.id}" %></li>
+<% end %>
+</ul>
+</div>
+<div class="col-lg-4 col-xl-4 col-md-4"></div>
+</div>

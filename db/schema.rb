@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180327220342) do
+ActiveRecord::Schema.define(version: 20180329232722) do
 
   create_table "companies", force: :cascade do |t|
     t.integer "rank"
@@ -126,6 +126,14 @@ ActiveRecord::Schema.define(version: 20180327220342) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "plans", force: :cascade do |t|
+    t.string "name"
+    t.integer "duration"
+    t.float "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "sectors", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -138,6 +146,17 @@ ActiveRecord::Schema.define(version: 20180327220342) do
     t.integer "population"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "subscribtions", force: :cascade do |t|
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.integer "user_id"
+    t.integer "plan_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["plan_id"], name: "index_subscribtions_on_plan_id"
+    t.index ["user_id"], name: "index_subscribtions_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

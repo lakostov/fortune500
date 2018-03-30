@@ -1,14 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'search/index'
+  get 'subscribtions/index'
 
-  get 'search/company'
-
-  get 'search/sector'
-
-  get 'search/industry'
-
-  get 'search/state'
+  resources :plans
 
   get 'sessions/new'
 
@@ -32,7 +26,7 @@ Rails.application.routes.draw do
   get '/fortune2017/', to: 'fortune2017#index'
   get '/fortune2017/:id', to: 'fortune2017#show'
   get '/sector/companies/:id', to: 'sector#companies'
-  post '/search/', to: 'search#index'
+  post '/search/', to: 'welcome#index'
   get '/search/company/', to: 'search#company'
   get '/search/sector/', to: 'search#sector'
   get '/search/industry/', to: 'search#industry'
@@ -68,6 +62,9 @@ Rails.application.routes.draw do
   get '/api/industries/', to: 'api#industries'
   get '/api/states/:id', to: 'api#states'
   get '/api/states/', to: 'api#states'
+  get '/subscribtions/', to: 'subscribtions#index'
+  get '/subscribtions/plans/:id', to: 'subscribtions#plans'
+  post '/subscribtions/:id', to: 'subscribtions#create'
   root 'welcome#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

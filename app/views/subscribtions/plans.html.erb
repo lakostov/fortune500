@@ -1,0 +1,20 @@
+<h1><%= @plan.name %></h1>
+<% if Subscribtion.find_by(user_id: current_user.id) %>
+<p>
+  <strong>Your subscribtion end date:</strong>
+  <%= current_user.subscribtion.end_date %><br>
+  Purchasing a plan will extend your subscribtion
+</p>
+<% end %>
+<div id="row">
+<div class="col-lg-4 col-xl-4 col-md-4"></div>
+<div class="fortune-list col-lg-4 col-xl-4 col-md-4 sm-12 xs-12">
+<ul>
+<li>Name: <%= @plan.name %></li>
+<li>Duration: <%= @plan.duration %> months</li>
+<li>Price: $<%= @plan.price %></li>
+<li><%= link_to "Subscribe", "/subscribtions/#{@plan.id}", method: :post %></li>
+</ul>
+</div>
+<div class="col-lg-4 col-xl-4 col-md-4"></div>
+</div>

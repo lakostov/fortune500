@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
-
+<% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
 <p>
   <strong>First name:</strong>
   <%= @user.first_name %>
@@ -19,6 +21,13 @@
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
+
+<% if @subsribtion_end_date %>
+<p>
+  <strong>Subscribtion end date:</strong>
+  <%= @subsribtion_end_date %>
+</p>
+<% end %>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Home', root_path %>

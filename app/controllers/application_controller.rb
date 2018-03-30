@@ -8,4 +8,8 @@ class ApplicationController < ActionController::Base
         redirect_to login_url
       end
   end
+
+  def subscribed_user
+    Subscribtion.find_by(user_id: current_user.id) && Subscribtion.find_by(user_id: current_user.id).end_date > DateTime.now.to_date
+  end
 end
