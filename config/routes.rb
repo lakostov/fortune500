@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
 
+  get 'password_resets/new'
+
+  get 'password_resets/edit'
+
   get 'subscribtions/index'
 
   resources :plans
 
   get 'sessions/new'
-
+  resources :password_resets, only: [:new, :create, :edit, :update]
   resources :users
   resources :account_activations, only: [:edit]
   get '/states/', to: 'states#index'

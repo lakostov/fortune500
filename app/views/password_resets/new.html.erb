@@ -1,0 +1,18 @@
+<% provide(:title, "Forgot password") %>
+<h1>Forgot password</h1>
+
+<div class="row">
+  <div class="col-lg-4 col-xl-4 col-md-4"></div>
+  <div class="login col-lg-4 col-xl-4 col-md-4">
+    <% flash.each do |message_type, message| %>
+            <div class="alert alert-<%= message_type %>"><%= message %></div>
+          <% end %>
+    <%= form_for(:password_reset, url: password_resets_path) do |f| %>
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control' %>
+
+      <%= f.submit "Submit", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+  <div class="col-lg-4 col-xl-4 col-md-4"></div>
+</div>
