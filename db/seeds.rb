@@ -22,3 +22,15 @@ User.create!(username:  "admin",
                activated: true,
                activated_at: Time.zone.now)
 end
+
+Plan.create(name:  "Three Months",
+             price: 19.95,
+             duration: 3)
+
+Plan.create(name:  "Six Months",
+             price: 29.95,
+             duration: 6)
+             
+Plan.create(name:  "Year",
+             price: 49.95,
+            duration: 12)
