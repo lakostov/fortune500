@@ -1,3 +1,4 @@
+#This file uses some code from Michael Hartl, Ruby on Rails Tutorial, Available at: https://www.railstutorial.org/book
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :logged_in_user, only: [:index, :show, :edit, :update, :destroy]

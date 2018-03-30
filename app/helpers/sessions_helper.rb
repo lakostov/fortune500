@@ -1,3 +1,4 @@
+#This file uses some code from Michael Hartl, Ruby on Rails Tutorial, Available at: https://www.railstutorial.org/book
 module SessionsHelper
   def log_in(user)
     session[:user_id] = user.id

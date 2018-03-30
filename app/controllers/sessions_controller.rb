@@ -1,3 +1,4 @@
+#This file uses code from Michael Hartl, Ruby on Rails Tutorial, Available at: https://www.railstutorial.org/book
 class SessionsController < ApplicationController
   def new
   end
