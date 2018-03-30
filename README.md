@@ -16,11 +16,11 @@ d.	rails db:seed
 To deploy to Heroku:
 1.  Set your Heroku origin
 2.  Install Heroku CLI and login
-3.  Initialise you local Git repository. Run in the consol:
+3.  Initialize you local Git repository. Run in the console:
 a.  git init
-4.  Add all files to your local Git repository. Run in the consol:
+4.  Add all files to your local Git repository. Run in the console:
 a.  git add -A
-5.  Commit in your local Git. Run in the consol:
+5.  Commit in your local Git. Run in the console:
 a.  git commit -m 'Initial commit'
 6.  Run in the console:
 a.  git push heroku master
@@ -29,6 +29,6 @@ c.  heroku run rake fortune500:seed_fortune500
 d.	heroku run rails db:seed
 7.  navigate to your app heroku url
 
-Admin accoun:
+Admin account:
 username: admin@fortune500app.com
 password: 2017fortune500
