@@ -13,6 +13,7 @@
     <li>Change: <span class="<%= @quote["change"] < 0 ? 'red' : 'green' %>"><%= @quote["change"] %></span></li>
     <li>High: <%= @quote["high"] %></li>
     <li>Low: <%= @quote["low"] %></li>
+    <li>Data provided for free by <%= link_to "IEX", "https://iextrading.com/developer/" %></li>
   </ul>
   </div>
   <div class="fortune-list col-lg-4 col-xl-4 col-md-4 sm-12 xs-12">
