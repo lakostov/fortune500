@@ -1,4 +1,6 @@
 class ApiController < ApplicationController
+  before_action :logged_in_user
+  before_action :subscribed_user
   def fortune2017
     render json: @result = params[:id] ? Company.find(params[:id]) : Company.all
   end

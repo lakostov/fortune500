@@ -27,6 +27,8 @@
   <strong>Subscribtion end date:</strong>
   <%= @subsribtion_end_date %>
 </p>
+<% else %>
+<%= link_to "Subscribe for API", "/subscribtions" %> | 
 <% end %>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
