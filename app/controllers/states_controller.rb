@@ -6,6 +6,6 @@ class StatesController < ApplicationController
 
   def show
     @state = State.find(params[:id])
-    @companies = Company.where("state_id = ?", "#{params[:id]}").paginate(page: params[:page], per_page: 30)
+    @companies = Company.where("state_id = ?", params[:id]).paginate(page: params[:page], per_page: 30)
   end
 end

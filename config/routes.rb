@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'error/not_found'
+
   get 'password_resets/new'
 
   get 'password_resets/edit'
@@ -30,7 +32,7 @@ Rails.application.routes.draw do
   get '/fortune2017/', to: 'fortune2017#index'
   get '/fortune2017/:id', to: 'fortune2017#show'
   get '/sector/companies/:id', to: 'sector#companies'
-  post '/search/', to: 'welcome#index'
+  post '/search/', to: 'search#index'
   get '/search/company/', to: 'search#company'
   get '/search/sector/', to: 'search#sector'
   get '/search/industry/', to: 'search#industry'
@@ -70,6 +72,8 @@ Rails.application.routes.draw do
   get '/subscribtions/plans/:id', to: 'subscribtions#plans'
   post '/subscribtions/:id', to: 'subscribtions#create'
   root 'welcome#index'
+
+  match '*a', :to => 'error#not_found', via: :get
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

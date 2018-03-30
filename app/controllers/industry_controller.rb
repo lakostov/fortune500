@@ -6,6 +6,6 @@ class IndustryController < ApplicationController
 
   def show
       @industry = Industry.find(params[:id])
-      @companies = Company.where("industry_id = ?", "#{params[:id]}").paginate(page: params[:page], per_page: 30)
+      @companies = Company.where("industry_id = ?", params[:id]).paginate(page: params[:page], per_page: 30)
   end
 end
