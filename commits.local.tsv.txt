@@ -1,0 +1,55 @@
+10882b8	Lachezar Kostov	Fri Mar 30 22:01:22 2018	Remove debbuger rendering
+d0df69d	Lachezar Kostov	Fri Mar 30 21:52:58 2018	Modify Readme file
+dd661d6	Lachezar Kostov	Fri Mar 30 21:00:49 2018	Fix search input
+6087bc0	Lachezar Kostov	Fri Mar 30 20:53:03 2018	Create custom 404 page
+5733349	Lachezar Kostov	Fri Mar 30 20:19:13 2018	Add references
+12fce33	Lachezar Kostov	Fri Mar 30 19:54:00 2018	Add link to stock quotes api provider
+198e75e	Lachezar Kostov	Fri Mar 30 19:18:12 2018	Fixing title on password edit
+9c6c08f	Lachezar Kostov	Fri Mar 30 18:00:11 2018	Create password recovery
+6c96d79	Lachezar Kostov	Fri Mar 30 16:49:19 2018	Add subscribtion link to user profile
+b44ac32	Lachezar Kostov	Fri Mar 30 16:16:37 2018	Create subscribtion for the api
+7c179d6	Lachezar Kostov	Thu Mar 29 20:27:43 2018	Create json api
+6271219	Lachezar Kostov	Thu Mar 29 18:25:41 2018	Create search
+b4c7ddd	Lachezar Kostov	Thu Mar 29 11:03:03 2018	Ghange default sender address
+e6d04a3	Lachezar Kostov	Thu Mar 29 10:55:05 2018	Add Sendgrid
+f19f39a	Lachezar Kostov	Thu Mar 29 10:31:33 2018	Create email activation and tests
+5bb8b56	Lachezar Kostov	Tue Mar 27 22:53:10 2018	Create authorisation and adjust tests
+2bc9310	Lachezar Kostov	Tue Mar 27 01:41:21 2018	Change admin email
+4aca8cc	Lachezar Kostov	Tue Mar 27 01:37:17 2018	Add admin and tests
+4b6f9f0	Lachezar Kostov	Mon Mar 26 19:31:15 2018	Add remember me and tests
+22ad2c8	Lachezar Kostov	Mon Mar 26 10:19:55 2018	Merge branch 'login'
+d6a354f	Lachezar Kostov	Mon Mar 26 10:19:19 2018	Edit session helper
+69b8bfe	Lachezar Kostov	Mon Mar 26 10:16:28 2018	Create user login logout and tests
+246d171	Lachezar Kostov	Mon Mar 26 01:14:53 2018	Create login and tests
+48004a2	Lachezar Kostov	Sun Mar 25 23:27:28 2018	Add SSL for production
+f23b680	Lachezar Kostov	Sun Mar 25 23:11:49 2018	Create user signup and tests
+cc1a222	Lachezar Kostov	Sun Mar 25 19:03:40 2018	Add bycript secure password and tests
+b6e20b6	Lachezar Kostov	Sun Mar 25 18:47:47 2018	Add User with validation and tests
+d3a1325	Lachezar Kostov	Sun Mar 25 12:01:35 2018	Style company quote
+761bb70	Lachezar Kostov	Sat Mar 24 23:51:47 2018	Dispaly quote for company stocks
+df28150	Lachezar Kostov	Sat Mar 24 22:14:26 2018	Paginate industries in sector
+dc388e6	Lachezar Kostov	Sat Mar 24 21:10:07 2018	Fix bug in data, count companies in sector
+85dc021	Lachezar Kostov	Sat Mar 24 19:50:55 2018	Sort industries alphabetically
+15b86e6	Lachezar Kostov	Fri Mar 23 23:47:36 2018	Add title to company chart
+71cd53a	Lachezar Kostov	Fri Mar 23 23:15:00 2018	Add charts to companies
+f383cc4	Lachezar Kostov	Fri Mar 23 00:30:11 2018	Fix layout body
+f648733	Lachezar Kostov	Fri Mar 23 00:21:44 2018	Fix layout footer
+9ef7c4f	Lachezar Kostov	Fri Mar 23 00:04:57 2018	Modify Secror page
+923a8e8	Lachezar Kostov	Thu Mar 22 23:49:26 2018	Modify sector chart
+0f576a5	Lachezar Kostov	Thu Mar 22 23:46:21 2018	Add sector chart
+81abb32	Lachezar Kostov	Thu Mar 22 23:29:53 2018	Add chartkick
+09549b6	Lachezar Kostov	Tue Mar 20 17:41:41 2018	Add controllers and populate views
+22a5eec	Lachezar Kostov	Mon Mar 19 23:50:18 2018	Scaffold fortune500 controllers
+7969a89	Lachezar Kostov	Mon Mar 19 17:30:07 2018	Hide footer on small screen
+295b4e5	Lachezar	Sun Mar 18 21:00:41 2018	Add map with markers and pagination
+38b406b	Lachezar	Sat Mar 17 16:45:02 2018	Modify task
+e5f9437	Lachezar	Sat Mar 17 16:41:16 2018	Modify rake task
+76e73e9	Lachezar	Sat Mar 17 16:27:38 2018	Reset database
+5d1ce6b	Lachezar	Sat Mar 17 16:15:27 2018	Add map and markers
+19e05ef	Lachezar	Fri Mar 16 18:12:10 2018	Add missing coordinates
+2d500aa	Lachezar	Fri Mar 16 17:28:26 2018	Create database and seed data
+cd9dc08	Lachezar	Mon Mar 12 12:54:29 2018	Add test for page title, add global title
+391281a	Lachezar	Mon Mar 12 11:55:54 2018	Import bootstrap files
+7203780	Lachezar	Mon Mar 12 11:53:08 2018	Add bootstrap jquery chartjs
+be366b1	Lachezar	Mon Mar 12 11:43:52 2018	Create Index page
+dac6392	Lachezar	Mon Mar 12 11:32:37 2018	Initial commit
