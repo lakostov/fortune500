@@ -8,18 +8,18 @@ class SearchController < ApplicationController
   end
 
   def company
-    @companies = Company.where("lower(name) LIKE ?", "%#{params[:name]}%")
+    @companies = Company.where("lower(name) LIKE ?", "%"+params[:name]+"%")
   end
 
   def sector
-    @sectors = Sector.where("lower(name) LIKE ?", "%#{params[:name]}%")
+    @sectors = Sector.where("lower(name) LIKE ?", "%"+params[:name]+"%")
   end
 
   def industry
-    @industries = Industry.where("lower(name) LIKE ?", "%#{params[:name]}%")
+    @industries = Industry.where("lower(name) LIKE ?", "%"+params[:name]+"%")
   end
 
   def state
-    @states = State.where("lower(name) LIKE ?", "%#{params[:name]}%")
+    @states = State.where("lower(name) LIKE ?", "%"+params[:name]+"%")
   end
 end
